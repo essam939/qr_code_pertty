@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-            child: QrPretty(
+            child: QrCodePretty(
                 image: AssetImage('images/man.png'),
                 typeNumber: 10,
                 size: 300,
