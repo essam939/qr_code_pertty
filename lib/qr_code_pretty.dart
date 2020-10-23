@@ -1,4 +1,5 @@
 library qr_code_pretty;
+
 import 'dart:async';
 import 'dart:ui';
 import 'dart:ui' as ui;
@@ -31,13 +32,13 @@ class QrPretty extends StatefulWidget {
 
   QrPretty(
       {Key key,
-        this.size = 100,
-        @required this.data,
-        this.elementColor = Colors.black,
-        this.errorCorrectLevel = QrErrorCorrectLevel.M,
-        this.roundEdges = false,
-        this.typeNumber = 1,
-        this.image})
+      this.size = 100,
+      @required this.data,
+      this.elementColor = Colors.black,
+      this.errorCorrectLevel = QrErrorCorrectLevel.M,
+      this.roundEdges = false,
+      this.typeNumber = 1,
+      this.image})
       : super(key: key);
 
   @override
@@ -64,37 +65,34 @@ class _QrPrettyState extends State<QrPretty> {
   Widget build(BuildContext context) {
     return widget.image == null
         ? CustomPaint(
-      size: Size(widget.size, widget.size),
-      painter: QrPrettyCodePainter(
-          data: widget.data,
-          errorCorrectLevel: widget.errorCorrectLevel,
-          elementColor: widget.elementColor,
-          roundEdges: widget.roundEdges,
-          typeNumber: widget.typeNumber),
-    )
+            size: Size(widget.size, widget.size),
+            painter: QrPrettyCodePainter(
+                data: widget.data,
+                errorCorrectLevel: widget.errorCorrectLevel,
+                elementColor: widget.elementColor,
+                roundEdges: widget.roundEdges,
+                typeNumber: widget.typeNumber),
+          )
         : FutureBuilder(
-      future: _loadImage(context),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.hasData) {
-          return Container(
-            child: CustomPaint(
-              size: Size(widget.size, widget.size),
-              painter: QrPrettyCodePainter(
-                  image: snapshot.data,
-                  data: widget.data,
-                  errorCorrectLevel: widget.errorCorrectLevel,
-                  elementColor: widget.elementColor,
-                  roundEdges: widget.roundEdges,
-                  typeNumber: widget.typeNumber),
-            ),
+            future: _loadImage(context),
+            builder: (BuildContext context, AsyncSnapshot snapshot) {
+              if (snapshot.hasData) {
+                return Container(
+                  child: CustomPaint(
+                    size: Size(widget.size, widget.size),
+                    painter: QrPrettyCodePainter(
+                        image: snapshot.data,
+                        data: widget.data,
+                        errorCorrectLevel: widget.errorCorrectLevel,
+                        elementColor: widget.elementColor,
+                        roundEdges: widget.roundEdges,
+                        typeNumber: widget.typeNumber),
+                  ),
+                );
+              } else {
+                return Container();
+              }
+            },
           );
-        } else {
-          return Container();
-        }
-      },
-    );
   }
 }
-
-
-
