@@ -1,6 +1,6 @@
-# pretty_qr_code
+# qr_code_pretty
 
-Pretty QR code for Flutter. You can round the edges with parameter or use the standard view.
+fast QR code rendering via a Widget or custom painter. You can round the edges with parameter or use the standard view.
 
 ## Features
 

@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(8.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15.0),
-              child: QrPretty(
+              child: QrCodePretty(
                   // image: AssetImage('images/man.png'),
                   typeNumber: 5,
                   elementColor: Colors.black,

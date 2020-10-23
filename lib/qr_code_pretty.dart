@@ -9,7 +9,7 @@ import 'package:qr/qr.dart';
 
 import 'qr_pretty_painter.dart';
 
-class QrPretty extends StatefulWidget {
+class QrCodePretty extends StatefulWidget {
   ///Widget size
   final double size;
 
@@ -30,7 +30,7 @@ class QrPretty extends StatefulWidget {
 
   final ImageProvider image;
 
-  QrPretty(
+  QrCodePretty(
       {Key key,
       this.size = 100,
       @required this.data,
@@ -42,10 +42,10 @@ class QrPretty extends StatefulWidget {
       : super(key: key);
 
   @override
-  _QrPrettyState createState() => _QrPrettyState();
+  _QrCodePrettyState createState() => _QrCodePrettyState();
 }
 
-class _QrPrettyState extends State<QrPretty> {
+class _QrCodePrettyState extends State<QrCodePretty> {
   Future<ui.Image> _loadImage(BuildContext buildContext) async {
     final completer = Completer<ui.Image>();
 
