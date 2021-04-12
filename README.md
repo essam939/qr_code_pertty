@@ -8,11 +8,11 @@ fast QR code rendering via a Widget or custom painter. You can round the edges w
 
 ## Screenshots
 
-  <img src="https://github.com/mido9000/qr_code_pertty/blob/master/images/Scr1.png" width="250"> 
+  <img src="https://github.com/mido9000/qr_code_pertty/blob/master/images/Scr1.png" width="250">
 
-  <img src="https://github.com/mido9000/qr_code_pertty/blob/master/images/Scr2.png" width="250"> 
+  <img src="https://github.com/mido9000/qr_code_pertty/blob/master/images/Scr2.png" width="250">
 
-  <img src="https://github.com/mido9000/qr_code_pertty/blob/master/images/Scr3.png" width="250"> 
+  <img src="https://github.com/mido9000/qr_code_pertty/blob/master/images/Scr3.png" width="250">
 
 
 

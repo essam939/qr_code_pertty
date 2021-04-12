@@ -26,24 +26,24 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.black,
         body: Center(
             child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
-              child: QrCodePretty(
-                  // image: AssetImage('images/man.png'),
-                  typeNumber: 5,
-                  elementColor: Colors.black,
-                  size: 300,
-                  data: 'https://www.google.com',
-                  errorCorrectLevel: QrErrorCorrectLevel.M,
-                  roundEdges: true),
-            ),
-          ),
-        )));
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: QrCodePretty(
+                    // image: AssetImage('images/man.png'),
+                      typeNumber: 5,
+                      elementColor: Colors.black,
+                      size: 300,
+                      data: 'https://www.google.com',
+                      errorCorrectLevel: QrErrorCorrectLevel.M,
+                      roundEdges: true),
+                ),
+              ),
+            )));
   }
 }
